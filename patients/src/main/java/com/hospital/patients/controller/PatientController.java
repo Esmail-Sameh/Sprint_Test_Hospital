@@ -1,12 +1,12 @@
 package com.hospital.patients.controller;
 
+import com.hospital.patients.model.Patient;
+import com.hospital.patients.model.PatientModel;
 import com.hospital.patients.servise.PatientServise;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/patients")
@@ -23,6 +23,11 @@ public class PatientController {
     @GetMapping(path = "/get-patients")
     public ResponseEntity getPatients(){
         return ResponseEntity.ok(patientServise.getPatient());
+    }
+
+    @PostMapping(path = "/save")
+    public ResponseEntity savePatient(@RequestBody Patient patient){
+        return ResponseEntity.ok(patient);
     }
 
 

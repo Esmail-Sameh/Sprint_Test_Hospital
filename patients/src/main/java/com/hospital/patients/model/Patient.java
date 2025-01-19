@@ -1,7 +1,10 @@
 package com.hospital.patients.model;
 
-public class Patient {
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+public class Patient {
+    @JsonProperty("firstName")
     private String name;
     private String address;
     private String phoneNumber;

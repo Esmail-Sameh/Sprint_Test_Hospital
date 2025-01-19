@@ -16,7 +16,7 @@ public class PatientServise {
 
      Patient patient = new Patient();
     public String printName(){
-        patientModel.setName("Esmail Sameh");
+        patientModel.setName("Esmail Sameh" , 20);
         return patientModel.getPatientName();
     }
 

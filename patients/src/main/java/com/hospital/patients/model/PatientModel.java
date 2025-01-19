@@ -7,14 +7,17 @@ import java.util.List;
 public class PatientModel {
 
     private String name;
+    private int age;
+
     List<String> names = new ArrayList<>();
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name , int age) {
         this.name = name;
+        this.age = age;
     }
 
     PatientModel(){
